@@ -20,14 +20,21 @@ https://github.com/kohlidevops/aws-solution-architect/blob/main/ec2-user-data.sh
 **Route 53 Supports the following Routing Policies**
 
 • Simple
+
 • Weighted
+
 • Failover
+
 • Latency based
+
 • Geolocation
+
 • Multi-Value Answer
-• Geoproximity (using Route 53 Traffic Flow feature)
+
+• Geoproximity - Out of scope Here
 
 **Routing Policies – Simple**
+
 1. Typically, route traffic to a single resource
 <img width="306" alt="image" src="https://github.com/kohlidevops/aws-r53-routing-policies/assets/100069489/ab28e24b-ed22-43cb-a9b7-3208f6b3b6c7">
 
