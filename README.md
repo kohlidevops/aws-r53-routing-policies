@@ -25,13 +25,15 @@ Route 53 Supports the following Routing Policies
 • Geoproximity (using Route 53 Traffic Flow feature)
 
 **Routing Policies – Simple**
-• Typically, route traffic to a single resource
+1. Typically, route traffic to a single resource
 <img width="306" alt="image" src="https://github.com/kohlidevops/aws-r53-routing-policies/assets/100069489/ab28e24b-ed22-43cb-a9b7-3208f6b3b6c7">
 
-• Can specify multiple values in the same record
-• If multiple values are returned, a random one is chosen by the client
-• When Alias enabled, specify only one AWS resource
-• Can’t be associated with Health Checks
+2. Can specify multiple values in the same record
+   <img width="313" alt="image" src="https://github.com/kohlidevops/aws-r53-routing-policies/assets/100069489/08c1de40-360a-488a-b876-28511d982ed0">
+
+3.  If multiple values are returned, a random one is chosen by the client
+4.  When Alias enabled, specify only one AWS resource
+5.  Can’t be associated with Health Checks
 
 
 
