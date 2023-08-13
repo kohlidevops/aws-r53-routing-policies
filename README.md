@@ -105,22 +105,32 @@ Likely, Ohio and Singapore region
 
 1. HTTP Health Checks are only for public resources
 2. Health Check => Automated DNS Failover:
+
    a. Health checks that monitor an endpoint such as application, server, other AWS resource
+   
    b. Health checks that monitor other health checks such as Calculated Health Checks
+   
    c. Health checks that monitor CloudWatch Alarms – e.g., throttles of DynamoDB, alarms on RDS, custom metrics. It helpful for private resources.
-3. Health Checks are integrated with CW metrics
+   
+4. Health Checks are integrated with CW metrics
 
 **Health Checks – Monitor an Endpoint**
 
 1. 15 global health checkers will check the endpoint health
+
    a. Healthy/Unhealthy Threshold – 3 (default)
+   
    b. Interval – 30 sec (can set to 10 sec – higher cost)
+   
    c. Supported protocol: HTTP, HTTPS and TCP
+   
    d. If > 18% of health checkers report the endpoint is healthy, Route 53 considers it Healthy. Otherwise, it’s Unhealthy
+   
    e. Ability to choose which locations you want Route 53 to use
-2. Health Checks pass only when the endpoint responds with the 2xx and 3xx status codes
-3. Health Checks can be setup to pass / fail based on the text in the first 5120 bytes of the response
-4. Configure you router/firewall to allow incoming requests from Route 53 Health Checkers
+   
+3. Health Checks pass only when the endpoint responds with the 2xx and 3xx status codes
+4. Health Checks can be setup to pass / fail based on the text in the first 5120 bytes of the response
+5. Configure you router/firewall to allow incoming requests from Route 53 Health Checkers
 
 **Route 53 – Calculated Health Checks**
 
